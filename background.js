@@ -4,6 +4,10 @@ let userSettings = {
   "version": "1.0",
 };
 
+chrome.storage.sync.get('shamelist', function (obj) {
+    userSettings.shameList = obj.shamelist;
+  });
+
 setInterval(()=>{
   getCurrentTabUrl(function(url) {
     if (userSettings.shameList.includes(url)) {

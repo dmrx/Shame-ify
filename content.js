@@ -3,7 +3,12 @@ let userSettings = {
   "shameList": ['https://www.facebook.com/', 'http://www.hackreactor.com/', 'https://www.buzzfeed.com/', 'https://www.etsy.com/', 'http://penthouse.com/', 'http://www.chippendales.com/'],
   "version": "1.0",
 };
+
+chrome.storage.sync.get('shamelist', function (obj) {
+    userSettings.shameList = obj.shamelist;
+
       console.log("Content.js thinks you are at: ", window.location.href);
+      console.log(userSettings.shameList);
 
     if (userSettings.shameList.includes(window.location.href)) {
       jQuery("<img/>").prependTo("body").attr({
@@ -13,4 +18,4 @@ let userSettings = {
         height: '100%',
      });  
   }
-
+});

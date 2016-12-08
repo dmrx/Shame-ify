@@ -4,6 +4,7 @@
   "name": "Shame(ify)",
   "description": "This extension shames you into living a better life.",
   "version": "1.0",
+  "options_page": "options.html",
   "content_scripts": [{
     "matches": ["<all_urls>"],
     "js": ["jquery.min.js", "content.js"]
@@ -20,6 +21,7 @@
   "permissions": [
     "activeTab",
     "tabs",
+    "storage",
     "tts"
   ]
 }
