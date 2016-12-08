@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Shame(ify)",
+  "description": "This extension shames you into living a better life.",
+  "version": "1.0",
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["jquery.min.js", "popup.js"]
+  }],
+  "background": {
+    "scripts": ["jquery.min.js", "background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "tts"
+  ]
+}
