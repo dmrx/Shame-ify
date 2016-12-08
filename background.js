@@ -1,6 +1,6 @@
 let userSettings = {
   "name": "Brian",
-  "shameList": ['https://www.facebook.com/', 'http://www.hackreactor.com/'],
+  "shameList": ['https://www.facebook.com/', 'http://www.hackreactor.com/', 'https://www.buzzfeed.com/', 'https://www.etsy.com/', 'http://penthouse.com/', 'http://www.chippendales.com/'],
   "version": "1.0",
 };
 

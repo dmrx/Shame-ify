@@ -6,18 +6,17 @@
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <title>Shame(ify)</title>
     <style>
       body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 100%;
+        color:rgb(255,75,122);
+        background-color: white;
       }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
+      .container {
+        margin: auto;
+        text-align: center;
       }
     </style>
 
@@ -31,11 +30,15 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <div class="container"></div>
-    <h2>SHAME(IFY)</h2>
-    <img src='raw.gif'>
+    <div class="container">
+    <img src='logo.png'>
+    <h4>'version 1.0'</h4>
+    <p>Developed by:<br> 
+      Brian Rudloff and David Marx</p>
+     <img src='founders.jpg'>
     <div id="status"></div>
     <img id="image-result" hidden>
+    </div>
   </body>
 </html>
 
