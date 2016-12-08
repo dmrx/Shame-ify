@@ -6,7 +6,7 @@
   "version": "1.0",
   "content_scripts": [{
     "matches": ["<all_urls>"],
-    "js": ["jquery.min.js", "popup.js"]
+    "js": ["jquery.min.js", "content.js"]
   }],
   "background": {
     "scripts": ["jquery.min.js", "background.js"]

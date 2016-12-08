@@ -4,15 +4,25 @@ let userSettings = {
   "version": "1.0",
 };
 
-setInterval(()=>{
-  getCurrentTabUrl(function(url) {
+jQuery("<img/>").prependTo("body").attr({
+  src: 'https://m.popkey.co/6bee24/6GJWk.gif',
+  alt: '',
+  width: '100%',
+  height: '100%',
+});  
+
+getCurrentTabUrl(function(url) {
+    // $('.container').prepend(`<p>Give the url: ${url}</p>`);
+    // $('.container').prepend(`<p>Give the url: ${userSettings}</p>`);
     if (userSettings.shameList.includes(url)) {
-      // chrome.tts.speak(`SHAME SHAME SHAME ${userSettings.name}`, {'rate': 0.7, 'gender': 'female', 'lang': 'en-GB', 'pitch': 0.7});
-      const shame = new Audio('shame.mp3');
-      shame.play();
-    }
-  });
-}, 7000);
+      jQuery("<img/>").prependTo("body").attr({
+        src: 'https://m.popkey.co/6bee24/6GJWk.gif',
+        alt: '',
+        width: '100%',
+        height: '100%',
+     });  
+  }
+})
 
 function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
