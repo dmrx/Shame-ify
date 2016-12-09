@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Shame(ify)",
-  "description": "This extension shames you into living a better life.",
+  "description": "Shame your way to a better life.",
   "version": "1.0",
   "options_page": "options.html",
   "content_scripts": [{

@@ -8,9 +8,23 @@ chrome.storage.sync.get('shamelist', function (obj) {
     userSettings.shameList = obj.shamelist;
   });
 
+function toShame(url){
+  let arr = userSettings.shameList.split(" ");
+  let urlB = url;
+  console.log(arr);
+  for (let i = 0; i < arr.length; i++){
+    if (urlB.includes(arr[i])) {console.log(arr[i]); return true;};
+  }
+  return false;
+}
+
+
 setInterval(()=>{
+  console.log('in interval')
   getCurrentTabUrl(function(url) {
-    if (userSettings.shameList.includes(url)) {
+    console.log("in the cur tab");
+    if (toShame(url)) {
+      console.log('in the shamer');
       // chrome.tts.speak(`SHAME SHAME SHAME ${userSettings.name}`, {'rate': 0.7, 'gender': 'female', 'lang': 'en-GB', 'pitch': 0.7});
       const shame = new Audio('shame.mp3');
       shame.play();
